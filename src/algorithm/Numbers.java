@@ -15,12 +15,12 @@ public class Numbers {
 	 * Use any databases[MongoDB, Oracle or MySql] to store data and retrieve data.
 	 *
 	 * At the end. After running all the sorting algo, come to a conclusion which one is suitable on given data set.
-	 *
+	 *z
 	 */
 
 	public static void main(String[] args) throws Exception {
 		
-		int [] num = new int[1000000];
+		int [] num = new int[1000];
 		storeRandomNumbers(num);
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		//Selection Sort
@@ -30,7 +30,7 @@ public class Numbers {
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
         connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
         List<String> numbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
-        printValue(numbers);
+        //printValue(numbers);
 		int n = num.length;
 		randomize (num, n);
 		//Insertion Sort
