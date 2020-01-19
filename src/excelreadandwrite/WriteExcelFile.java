@@ -12,7 +12,7 @@ import java.io.IOException;
 public class WriteExcelFile {
 
 
- private static final String FILE_NAME = System.getProperty("user.dir") + "/DataTest/Sample.xlsx";
+ private static final String FILE_NAME = "C:\\Users\\mdshu\\IdeaProjects\\MidTermWeekDaysDecember2019\\src\\data\\pnt test cases.xlsx";
 
  public static void main(String[] args) {
 
