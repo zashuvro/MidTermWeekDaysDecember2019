@@ -12,10 +12,14 @@ public class MergeTwoArraysAndRemoveDuplicatesProgram {
 
     public static void main(String[] args)
     {
-mergeArray();
+
+
+        System.out.println(Arrays.toString(mergeArray()));
+
+        System.out.println(Arrays.toString(removeDuplicates(mergeArray())));
     }
     public static int[] mergeArray(){
-        int [] arrayA={1,3,4};
+        int [] arrayA={1,3,4,};
         int [] arrayB={4,5,6,7,8};
         //merging two array
         int []result=new int[arrayA.length+arrayB.length];
@@ -25,17 +29,30 @@ mergeArray();
         for(int i=0;i<arrayB.length;i++){
             result[i+arrayA.length]=arrayB[i];
         }
-        //removing duplicates
-        int j=0;
-        for(int i=0;j<result.length-2;i++){
-            if(result[i]!=result[i+1]){
-                result[j++]=result[i];
+        return result;
+    }
+    public static int[] removeDuplicates(int[] arr) {
+
+        int end = arr.length;
+
+        for (int i = 0; i < end; i++) {
+            for (int j = i + 1; j < end; j++) {
+                if (arr[i] == arr[j]) {
+                    int shiftLeft = j;
+                    for (int k = j+1; k < end; k++, shiftLeft++) {
+                        arr[shiftLeft] = arr[k];
+                    }
+                    end--;
+                    j--;
+                }
             }
         }
-        result[j++]=result[result.length-1];
-        for(int i=0;i<result.length-1;i++){
-            System.out.print(result[i]+" ");}
-        return result;
+
+        int[] whitelist = new int[end];
+        for(int i = 0; i < end; i++){
+            whitelist[i] = arr[i];
+        }
+        return whitelist;
     }
 
 

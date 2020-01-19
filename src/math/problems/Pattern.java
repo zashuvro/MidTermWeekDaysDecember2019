@@ -8,7 +8,27 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+		int number=100,j=1,k=1,f=1,p=1;
+		for(int i=number;i>=1;i--){
+			if(j<=10) {
+				System.out.print(i + " ");
+				j++;
+			}
+			else if(k<=10){
+				System.out.print((i)+" ");
+				i--;
+				k++;
+			}	else if(f<=10){
+				System.out.print((i)+" ");
+				i-=2;
+				f++;
+			}	else if(p<=10){
+				System.out.print((i)+" ");
+				i-=3;
+				p++;
+			}
+
+		}
 
 
 	}
