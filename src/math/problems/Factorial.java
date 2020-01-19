@@ -11,7 +11,7 @@ public class Factorial {
          * Write a java program to find Factorial of a given number using Recursion as well as Iteration.
          *
          */
-        int num,i=1,fac=1;
+        int num;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the number:: ");
         num=sc.nextInt();
@@ -21,14 +21,14 @@ public class Factorial {
 
 
     }
-    public static void fact(int num){
+    public static int fact(int num){
         int i,fac=1;
         System.out.println("Factroial Using Iteration");
         for(i=1;i<=num;i++){
             fac=fac*i;
         }
         System.out.println("Factroial of "+num+ " is "+fac);
-
+    return fac;
     }
 
 
