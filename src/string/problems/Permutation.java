@@ -13,12 +13,10 @@ public class Permutation {
         printPermutn("abc","");
     }
 
-    public static void printPermutn(String str, String ans)
+    public static String printPermutn(String str, String ans)
     {
-
         if (str.length() == 0) {
             System.out.print(ans + " ");
-            return;
         }
 
         for (int i = 0; i < str.length(); i++) {
@@ -28,5 +26,6 @@ public class Permutation {
                     str.substring(i + 1);
             printPermutn(ros, ans + ch);
         }
+        return str;
     }
 }

@@ -36,7 +36,7 @@ public class DuplicateWord {
         System.out.println("The Total Character of The String st is: "+(double)(ch.length-space));
         System.out.println("Average length of the words:: "+ (double)((ch.length-space)/word.length));
 
-        return s;
+        return word[0];
     }
 
 }
